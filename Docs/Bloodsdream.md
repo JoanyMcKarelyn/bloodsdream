@@ -11,3 +11,4 @@ Extra thanks to:
 - If not for Morrowind Modding Madness 2022 and [Team Gobblin Goblins](https://www.nexusmods.com/morrowind/mods/51940), I would never have thought of doing a dungeon-quest-adventure mod. 
 - [Necrolesian and Dynamic Timescale](https://www.nexusmods.com/morrowind/mods/48287), for adding the interop!
 - [Hrnchamd's Weather Adjuster](https://www.nexusmods.com/morrowind/mods/46816), [tewlwolow's Glass Dome of Vivec - Moonrain Edition](https://www.nexusmods.com/morrowind/mods/48946), and [Watch the Skies](https://www.nexusmods.com/morrowind/mods/48636), for the weather portion of the scripts.
+- [DetailDevil](https://www.nexusmods.com/morrowind/users/5708545), for suggesting adding mist around islands.
