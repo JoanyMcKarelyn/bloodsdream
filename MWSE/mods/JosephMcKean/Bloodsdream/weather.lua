@@ -68,7 +68,7 @@ local function getWeatherColors()
 	local weatherController = tes3.worldController.weatherController
 	local weather = weatherController.weathers[6]
 	vectorTable2TableTable(weather, data.weatherColors)
-	data.cloudTx = weather.cloudTexture
+	data.normalCloudTexture = weather.cloudTexture
 end
 event.register("loaded", getWeatherColors, { priority = -246 })
 
@@ -79,15 +79,15 @@ local function alienSky()
 	if isTrappedInDreamWorld[cell and cell.id:lower()] then
 		-- weather colors and cloud texture
 		tableTable2VectorTable(data.alienColors, weather)
-		weather.cloudTexture = "Textures\\jo\\sky_vaermina_01.dds"
+		weather.cloudTexture = data.alienCloudTexture
+		log:debug("weather.cloudTexture = %s", data.alienCloudTexture)
 		-- switch weather to thunderstorm and block any weather transition
 		weatherController:switchImmediate(weather.index)
 		weatherController:updateVisuals()
 		previousCell = cell
 	elseif isTrappedInDreamWorld[previousCell and previousCell.id:lower()] then
-		log:debug("The player is not trapped in dream world, changing the weather back to regular thunderstorm!")
 		tableTable2VectorTable(data.weatherColors, weather)
-		weather.cloudTexture = data.cloudTx
+		weather.cloudTexture = data.normalCloudTexture
 		weatherController:switchImmediate(weather.index)
 		weatherController:updateVisuals()
 		previousCell = cell

@@ -1,5 +1,9 @@
 local this = {}
 
+this.texturesPath = "textures\\jsmk\\bd\\"
+this.headerImagePath = this.texturesPath .. "banner_bloodsdream.dds"
+this.alienCloudTexture = this.texturesPath .. "sky_vaermina1.dds"
+
 this.insideTimescale = 1 / 3
 this.isTrappedInDreamWorld = { ["adanja's dream, pelagiad"] = true, ["shrine of vaermina"] = true }
 
@@ -46,6 +50,9 @@ this.weatherColors = {
 	sunNightColor = {},
 	sundiscSunsetColor = {},
 }
-this.cloudTx = ""
+this.normalCloudTexture = ""
+
+this.strangeSecretRockID = "jsmk_terrian_rock_ai"
+this.strangeSecretDoorID = "jsmk_cave_entrance"
 
 return this

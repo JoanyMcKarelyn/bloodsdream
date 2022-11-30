@@ -87,6 +87,8 @@ local function onInit()
 		-- resting changes
 		event.register("cellChanged", stopDarkBrotherhoodAttackScript, { priority = -246 })
 		event.register("uiActivated", thereAreNoTents, { filter = "MenuRestWait", priority = -246 })
+		-- Cave Behind the Rocks
+		dofile("JosephMcKean.Bloodsdream.CaveBehindtheRocks")
 	end
 end
 event.register("initialized", onInit, { priority = -246 })
